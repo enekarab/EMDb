@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMDb - Anmeldung</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light justify-content-between">
+    <div class="d-flex align-items-center">
+        <a class="navbar-brand" href="../../home.html"><img src="../pic/logo.png" height="45px"/></a>
+        <a class="navbar-brand" href="../../home.html"><img src="../pic/emdb.png" height="45px"/></a>
+
+    </div>
+    <div class="d-flex align-items-center">
+        <a class="navbar-brand" href="../../home.html"><img src="../pic/homepage.png" height="45px"/></a>
+        <a class="navbar-brand" href="../html/dieserie.html"><img src="../pic/dieserien.png" height="45px"/></a>
+        <a class="navbar-brand" href="../html/diefilme.html"><img src="../pic/diefilme.png" height="45px"/></a>
+    </div>
+
+</nav>
+
+
+
+<style>
+  body {
+      background-color: #e4fbff;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+  }
+  .container {
+      width: 500px;
+      margin: 0 auto;
+      margin-top: 100px;
+      padding: 20px;
+      background-color: #91d8e4;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  }
+  .container:hover {
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+  }
+  .center-view {
+      text-align: center;
+  }
+  .alert {
+      color: red;
+  }
+  .hidden {
+      display: none;
+  }
+  .button {
+      padding: 10px 20px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #fff;
+  }
+  .button-primary {
+      color: black;
+      background-color: #ffd717;
+      border-color: #ffd717;
+  }
+  .button-primary:hover {
+      background-color: #f5ce07;
+      border-color: #f5ce07;
+  }
+  .button-secondary {
+      background-color: #083358;
+      border-color: #083358;
+  }
+  .button-secondary:hover {
+      background-color: #022b50;
+      border-color: #022b50;
+  }
+  .button-guest {
+      background-color: #1076c3;
+      border-color: #1076c3;
+  }
+  .button-guest:hover {
+      background-color: #006bbd;
+      border-color: #006bbd;
+  }
+  .button-register {
+      background-color: #083358;
+      border-color: #083358;
+  }
+  .button-register:hover {
+      background-color: #022b50;
+      border-color: #022b50;
+  }
+  a{
+    font-family:Verdana;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bolder;
+  }
+
+
+  .copy_right_footer {
+    border: 4px solid black;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    background-color: #083358;
+    line-height: 3;
+    text-align: center;
+    font-family: 'Arial';
+    position: fixed;
+}
+
+
+
+  input[type="email"], input[type="password"] {
+    padding: 5px;
+    border: 3px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+  input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
+}
+
+
+        /* Styles for 927 */
+        @media screen and (max-width: 927px) {
+            .container{
+                margin-top: 20px;
+            }
+        }
+        /* Styles for 600 */
+        @media screen and (max-width: 600px) {
+            .container{
+                margin-top: 5px;
+                width: 400px;
+            }
+        }
+</style>
+</head>
+
+
+<body>
+<div class="container">
+  <div class="center-view">
+   
+      <form id="loginForm" action="#" method="post" onsubmit="return validateForm()">
+          
+          <br><input type="email" id="email" name="email" required placeholder="Geben Sie bitte Ihre E-Mail hier!"><br>
+          
+          <input type="password" id="password" name="password" required placeholder="Geben Sie bitte Ihre Kennwort hier!"><br>
+          <a onclick="forgotPassword()">Haben Sie Kennwort vergessen?</a>
+          <p id="alert" class="alert"></p>
+          <button type="submit" class="button button-primary">Anmelden</button> <br><br>
+      </form>
+      <button id="registrationNotification" class="button button-register">Registrieren</button>
+      <button onclick="loginAsGuest()" class="button button-guest">Als Gast fortfahren!</button> <br><br>
+  </div>
+</div>
+
+
+
+
+      <div id="KA" class="copy_right_footer">
+        <strong>© 2024 Mein Blog. Alle Rechte vorbehalten. Developed By Enes F. Karabag</strong>
+        </div>
+
+    <script src="../js/anmeldung.js"></script>
+        
+      </body>
+</html>
