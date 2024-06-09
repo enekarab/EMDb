@@ -90,6 +90,7 @@ body {
         box-sizing: border-box;
         min-height: 320px;
     }
+  
 
     .films::after {
         content: "";
@@ -202,6 +203,15 @@ button.prev {
 
 button.next {
     right: 0;
+}
+
+/* screen for 1655 */
+@media screen and (max-width:1655px) {
+    .filme {
+        width: 25%;
+        padding: 5px;
+        min-height: 420px;
+    }
 }
 
 @media screen and (max-width:720px) {
